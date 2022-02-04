@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ### Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+
+  /* ### Accent */
+  --blue: hsl(248, 32%, 49%);
+
+  /* ### Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--red) url('./images/bg-intro-mobile.png') no-repeat center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  width: 375px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  margin-bottom: 1rem;
+}
+
+section.price {
+  background-color: var(--blue);
+  padding: 1rem 5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+section.price span {
+  font-weight: 700;
+}
+
+section.form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem 0.5rem;
+}
+
+section.form .form-control {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+section.form .form-control input {
+  font-family: inherit;
+  font-weight: 600;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid var(--grayish-blue);
+}
+
+section.form .form-control input:focus {
+  outline: none;
+}
+
+section.form .form-control input.error {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+section.form .form-control img.error_icon {
+  position: absolute;
+  left: 85%;
+  top: 22%;
+  visibility: hidden;
+}
+
+section.form .form-control span {
+  display: block;
+  font-size: 12px;
+  color: var(--red);
+  text-align: right;
+  font-style: italic;
+  margin-top: 0.25rem;
+  visibility: hidden;
+}
+
+section.form .form-control span.show,
+section.form .form-control img.show {
+  visibility: visible;
+}
+
+section.form .form-control button {
+  background-color: var(--green);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-shadow: 0px 4px 0px hsl(154, 79%, 39%);
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+section.form .form-control button:hover {
+  background-color: hsl(154, 68%, 67%);
+}
+
+section.form p {
+  color: var(--grayish-blue);
+  font-size: 12px;
+  padding: 0 3rem;
+}
+
+section.form p span {
+  color: var(--red);
+  font-weight: 600;
+}
+
+@media screen and (min-width) {
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1000px;
+    background-image: url('./images/bg-intro-desktop.png');
+  }
+
+  header {
+    flex: 1;
+    text-align: left;
+    padding: 0 2rem;
+  }
+
+  header h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  section.price {
+    padding: 1rem;
+  }
+
+  section.form p {
+    font-size: 10px;
+  }
+}
